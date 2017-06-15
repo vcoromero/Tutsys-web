@@ -5,7 +5,6 @@
  include 'models/mAcceso.php';
  $obj=  new mAcceso();
  $data=$obj->validarLogin($_POST['matricula'],$_POST['contrasena']); 
-
  }
 ?>
 <!DOCTYPE html>
@@ -14,32 +13,30 @@
     <body class="jumbotron">
         <div class="container">
             <div class="row">
-                <div style="margin-top:7%" class="col-md-4 col-md-offset-4">
-                <?php if(isset($_GET['msg']))
-                {
-                    echo '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.$_GET['msg'].'</div>';
-                }
-                ?>
-                    <div class="panel panel-success">
-                        <div class="panel-body">
-                        <img style="max-width:230px;margin:auto;" src="assets/img/tutsys.png" class="img-responsive">
-                            <form id="formulario-login" method="POST">
-                                <div class="form-group">
-                                    <label for="">Matricula</label>
-                                    <input type="text" class="form-control" name="matricula" placeholder="Ingrega tu matricula">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Contraseña</label>
-                                    <input type="password" class="form-control" name="contrasena" placeholder="Ingresa tu contraseña">
-                                </div>
-
-                                <button type="submit" name="btnenviar" class="btn btn-lg btn-block btn-success">Enviar</button>
-                            </form>
-                            <br>
+                <div  class="col m6 s10 offset-m3 offset-s1">
+                    <div class="card-panel white">
+                        <div class=" row center-align">
+                            <img style="max-width:230px;margin:auto;" src="assets/img/tutsys.png" class="responsive-img">
                         </div>
+                        <form id="formulario-login" method="POST">
+                        <div class="row">
+                            <div class="input-field">
+                                <input name="matricula" id="matricula" type="text" class="validate">
+                                <label for="matricula">Matricula</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field">
+                                <input name="contrasena" id="contrasena" type="password" class="validate">
+                                <label for="contrasena">Contraseña</label>
+                            </div>
+                        </div>
+                        <div class="row center-align">
+                            <button class="btn waves-effect waves-light green" type="submit" name="btnEnviar">Entrar<i class="material-icons right">send</i></button>
+                        </div>
+                        </form>
                     </div>
-
-                </div>
+                </div>    
             </div>
         </div>
         <?php include("includes/footer.php") ?>

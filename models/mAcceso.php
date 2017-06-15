@@ -24,8 +24,14 @@ class mAcceso{
                 $_SESSION['nombreUsuario'] = utf8_encode($row['nombre']);	
                 $_SESSION['idPersona'] = $row['idPersona'];	
                 $_SESSION['idTipoUsuario']=$row['idTipoUsuario'];
-                
-                header("location: home.php");             
+                if($_SESSION['idTipoUsuario']==1)
+                {
+                    header("location: panelAdmin.php");             
+                }
+                else
+                {
+                    header("location: home.php");             
+                }
                 return true;
             }
             else
