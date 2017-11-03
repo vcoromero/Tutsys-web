@@ -13,7 +13,7 @@
     <body class="jumbotron">
         <div class="container">
             <div class="row">
-                <div  class="col m6 s10 offset-m3 offset-s1">
+                <div  class="col l6 m8 s10 offset-l3 offset-m2 offset-s1">
                     <div class="card-panel white">
                         <div class=" row center-align">
                             <img style="max-width:230px;margin:auto;" src="assets/img/tutsys.png" class="responsive-img">

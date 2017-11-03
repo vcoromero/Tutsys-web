@@ -20,18 +20,13 @@ class mAcceso{
             {
                 $_SESSION['idUsuario'] = $row['idUsuario'];
                 $_SESSION['matriculaUsuario'] = $row['matriculaUsuario'];	
-                $_SESSION['tipoUsuario'] =  utf8_encode($row['nombreTipoUsuario']);
-                $_SESSION['nombreUsuario'] = utf8_encode($row['nombre']);	
+                $_SESSION['tipoUsuario'] =  ($row['nombreTipoUsuario']);
+                $_SESSION['nombreUsuario'] = ($row['nombre'].' '.$row['appaterno'].' '.$row['apmaterno']);	
+                $_SESSION['correoPersonal'] = ($row['correoPersonal']);
                 $_SESSION['idPersona'] = $row['idPersona'];	
                 $_SESSION['idTipoUsuario']=$row['idTipoUsuario'];
-                if($_SESSION['idTipoUsuario']==1)
-                {
-                    header("location: panelAdmin.php");             
-                }
-                else
-                {
-                    header("location: home.php");             
-                }
+                
+                header("location: home.php".$_POST[$_SESSION['idTipoUsuario']]);             
                 return true;
             }
             else
