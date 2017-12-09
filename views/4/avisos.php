@@ -29,7 +29,7 @@ $n=1;
             </tbody>
         </table>
         <div class="card-action center-align">
-            <a class="btn green" href="#">Nuevo mensaje</a>
+            <a class="btn green" href="?sec=nuevoaviso">Nuevo aviso</a>
         </div>
     </div>
 </div>

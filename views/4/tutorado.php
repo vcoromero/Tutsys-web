@@ -2,17 +2,7 @@
 require('models/mTutorado.php');
 $obj=  new mTutorado();
 $data=$obj->getTutoradosActivos(); 
-$data2=$obj->getTutoradosInactivos(); 
 $n=1;
-$i=1;
-if(isset($_GET['idInhabilitar']))
-{
-    $obj->inhabilitarTutorado($_GET['idInhabilitar']);
-}
-if(isset($_GET['idHabilitar']))
-{
-    $obj->habilitarTutorado($_GET['idHabilitar']);
-}
 ?>
 <div class="row">
     <div class="card-panel">
@@ -35,8 +25,8 @@ if(isset($_GET['idHabilitar']))
                     <td><?php echo $row['carrera'];?></td>
                     <td><?php echo $row['semestre'];?></td>
                     <td>
-                        <a class="waves-effect waves-light btn green" href="?sec=mensaje&id=<?php echo $row["idPersona"];?>"><i class="tiny material-icons">contact_mail</i></a>
-                        <a class="waves-effect waves-light btn green" href="?sec=citar&id=<?php echo $row["idPersona"]; ?>"><i class="tiny material-icons">book</i></a>
+                        <a class="waves-effect waves-light btn green" href="?sec=mensajeTutor&id=<?php echo $row["idPersona"];?>"><i class="tiny material-icons">contact_mail</i></a>
+                        <a class="waves-effect waves-light btn green" href="?sec=citarTutor&id=<?php echo $row["idPersona"]; ?>"><i class="tiny material-icons">book</i></a>
                         <a class="waves-effect waves-light btn green" href="?sec=citarDepartamentoApoyo&id=<?php echo $row["idPersona"]; ?>"><i class="tiny material-icons">collections_bookmark</i></a>  
                     </td>
                 </tr>

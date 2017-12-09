@@ -8,7 +8,7 @@ $n=1;
 <div class="row">
     <div class="col l8 m8 s8 offset-l2 offset-m2 offset-s2">
         <div class="card-panel">
-            <span class="card-title"><h4>Tutorados</h4></span>
+            <span class="card-title"><h4>Departamentos de apoyo</h4></span>
             <table class="highlight ">
                 <thead>
                     <tr>
